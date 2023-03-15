@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
             if(result.getContents() != null) {
                 String datas = "Data: \n"+result.getContents()+"\n\nDecoded: \n"+ result.getContents();
                 Toast.makeText(MainActivity.this, datas, Toast.LENGTH_LONG).show();
-                text = datas;
+                text = result.getContents();
                 code();
             }
         }

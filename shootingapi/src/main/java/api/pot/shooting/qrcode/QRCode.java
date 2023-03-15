@@ -12,7 +12,7 @@ public class QRCode {
 
     public final static int QRCodeBlackColor = Color.BLACK;
     public final static int QRCodeWhiteColor = Color.WHITE;
-    public final static int QRcodeWidth = 350 ;
+    public final static int QRcodeWidth = 1000 ;
     public static Bitmap textToImageEncode(String Value) throws WriterException {
         BitMatrix bitMatrix;
         try {
@@ -42,7 +42,7 @@ public class QRCode {
         }
         Bitmap bitmap = Bitmap.createBitmap(bitMatrixWidth, bitMatrixHeight, Bitmap.Config.ARGB_4444);
 
-        bitmap.setPixels(pixels, 0, 350, 0, 0, bitMatrixWidth, bitMatrixHeight);
+        bitmap.setPixels(pixels, 0, QRcodeWidth, 0, 0, bitMatrixWidth, bitMatrixHeight);
 
         return bitmap;
     }
